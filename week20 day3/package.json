@@ -1,0 +1,19 @@
+{
+  "name": "day3",
+  "version": "1.0.0",
+  "description": "\"practice\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel day3 -d dict"
+  },
+  "author": "vaibhav",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  },
+  "devDependencies": {
+    "babel-preset-latest": "^6.24.1"
+  }
+}

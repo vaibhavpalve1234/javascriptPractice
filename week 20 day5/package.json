@@ -1,0 +1,17 @@
+{
+  "name": "day5.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "day5.js",
+  "scripts": {
+    "start": "babel-watch ./scr/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vaibhav",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-watch": "^7.3.0"
+  }
+}
