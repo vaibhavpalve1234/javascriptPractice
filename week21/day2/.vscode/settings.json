@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.confirmOnExit": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.copyOnSelection": true
+}

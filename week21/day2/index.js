@@ -1,9 +1,9 @@
-var name1  = "vaibhav" ;
- var about="i am engineer and persunging last year";
-
-console.log(`hello my name is ${name1} and late understand about me ${about}`);
-console.log(2+5);
- 
 
 const fs = require("fs");
-fs.writeFileSync("read.txt","welcome to my rggfg");
+fs.writeFileSync("readwrite.txt","my class is amazing");
+fs.appendFileSync("readwrite.txt"," new car taken by dada by in ulhasnagar");
+fs.appendFileSync("readwrite.txt", "  mumbai is one of the best city on the world");
+const new_name = fs.renameSync("readwrite.txt","readwrite1.txt");
+
+
+fs.mkdir("./",)
