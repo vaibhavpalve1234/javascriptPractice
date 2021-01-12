@@ -4,6 +4,6 @@ const server = http.createServer((req, resp) => {
   resp.end("completed our side my name vaibhav palve");
 });
 server.listen(5000, () => {
-  console.log("http://googlecom:5000");
+  console.log("http://localhost:5000");
 });
 
