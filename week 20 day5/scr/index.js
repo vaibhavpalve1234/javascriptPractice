@@ -1,4 +1,5 @@
 import * as addition from "./addition";
+// const addition = require("./addition");
 import * as substraction from "./substraction";
 import * as multiplication from "./multiplication";
 
