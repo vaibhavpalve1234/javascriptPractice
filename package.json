@@ -1,11 +1,11 @@
 {
-  "name": " ",
+  "name": "javascriptpractice",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon week22day6/index.js"
+    "start": "nodemon week22end/jspracties.js"
   },
   "repository": {
     "type": "git",

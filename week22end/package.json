@@ -1,0 +1,15 @@
+{
+  "name": "week22end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jspractices.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./jspractices.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
