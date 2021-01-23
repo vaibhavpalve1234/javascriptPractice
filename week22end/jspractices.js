@@ -117,3 +117,13 @@ const pe = new person1("q")
 console.log(pe.mode());
 
 
+let name = "vaibhav"
+const result = function(name){
+    if (name === 'vaibhav'){
+        console.log("pass");
+    }else if(name === "vap"){
+        console.log('hi we are together hi')
+    }
+}
+name = 'vap'
+console.log(result)
