@@ -54,76 +54,84 @@
 // console.log(s)
 
 //conditional
-var x = 10;
-if (x >5 && x > 15) {
-  console.log("hello");
-}else if( x > 10){
- console.log("hellllll")
-}
-else  {
-  console.log(typeof null);
-}
+// var x = 10;
+// if (x >5 && x > 15) {
+//   console.log("hello");
+// }else if( x > 10){
+//  console.log("hellllll")
+// }
+// else  {
+//   console.log(typeof null);
+// }
 
-//turnari operatores
-let e = 0;
-const color = e >10?"yes":"no";
-console.log(color)
-switch (color) {
-    case "yes":
-        console.log("heklo");
-        break;
-    case "no":
-        console.log("hahahah");
-        break;
-    default:
-        console.log("heheheheheh")
-        break;
-}
-function sum(a=1,b=1) {
-    return a+b
+// //turnari operatores
+// let e = 0;
+// const color = e >10?"yes":"no";
+// console.log(color)
+// switch (color) {
+//     case "yes":
+//         console.log("heklo");
+//         break;
+//     case "no":
+//         console.log("hahahah");
+//         break;
+//     default:
+//         console.log("heheheheheh")
+//         break;
+// }
+// function sum(a=1,b=1) {
+//     return a+b
     
-}
-console.log(sum(7,5))
+// }
+// console.log(sum(7,5))
 
-const ss = (a,b)=>a+2+b
+// const ss = (a,b)=>a+2+b
 
-console.log(ss(5,12221))
+// console.log(ss(5,12221))
 
-function person(last,first,add) {
-    this.last = last;
-    this.first = first;
-    this.add = new Date(add);
-    this.kk = [1,2,3,4,5,57777777]
-    this.kk1 = ()=>{
-        return this.last
-    }
-}
-person.prototype.ggv= function dd() {
-    return console.log(this.kk1())
-}
-const cc= new person("vap",'pal','ll');
-console.log(cc.ggv())
-
-
-class person1 {
-    constructor(l){
-        this.l1 = l;
-    }
-    mode(){
-        console.log(this.l1)
-    }
-}
-const pe = new person1("q")
-console.log(pe.mode());
+// function person(last,first,add) {
+//     this.last = last;
+//     this.first = first;
+//     this.add = new Date(add);
+//     this.kk = [1,2,3,4,5,57777777]
+//     this.kk1 = ()=>{
+//         return this.last
+//     }
+// }
+// person.prototype.ggv= function dd() {
+//     return console.log(this.kk1())
+// }
+// const cc= new person("vap",'pal','ll');
+// console.log(cc.ggv())
 
 
-let name = "vaibhav"
+// class person1 {
+//     constructor(l){
+//         this.l1 = l;
+//     }
+//     mode(){
+//         console.log(this.l1)
+//     }
+// }
+// const pe = new person1("q")
+// console.log(pe.mode());
+
+
 const result = function(name){
     if (name === 'vaibhav'){
         console.log("pass");
+        return 
     }else if(name === "vap"){
         console.log('hi we are together hi')
+        return 
     }
+    else{
+        const sum = (a,b)=>{
+            return a+b
+        }
+    console.log(sum(1,2))
 }
-name = 'vap'
-console.log(result)
+}
+// name = 'vap'
+let name = ""
+result(name)
