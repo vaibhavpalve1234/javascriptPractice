@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const name = () =>{
+        setTimeout( () =>{ 
+            let roll_no = [1,2,3,4,5]
+            console.log(roll_no)
+            setTimeout( (roll_no) =>{
+                console.log("h2");
+                console.log(roll_no);
+                const bio = {
+                    name: "vaibhav",
+                    age : 15}
+                console.log(bio)
+                setTimeout( (bio)=>{
+                    console.log("h3")
+                    setTimeout( () =>{
+                        console.log("h4")
+                    },2000)
+                    console.log(bio)
+                },2000,bio.name)
+            },2000,roll_no[1])
+        },2000)}
+      name()
+      const system = ()=>{
+        setTimeout(()=>{
+          let system = ["","","","","",""]
+          console.log(system)
+          setTimeout((system)=>{
+            system[2]="55"
+            console.log(...system)
+            setTimeout((system)=>{
+              system.push("88","77","99")
+              console.log(...system)
+              setTimeout(()=>{console.log("vaibhav adinath palve")},2000)
+            },2000,system)
+
+          },2000,system)
+        },2000)
+      }
+      system()
+      const vap = ()=>{
+        setTimeout(()=>{
+          console.log('h1')
+        },2000)
+        setTimeout(()=>{console.log("h2")},200)
+      }
+      vap()
+
+      
+      
+
+
+    </script>
+  </body>
+</html>

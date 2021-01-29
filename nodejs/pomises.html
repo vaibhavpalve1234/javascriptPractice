@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // eleminate callback than use promises
+        const pobj1 = new Promise( (resolve,reject)=> {
+            setTimeout( ()=>{
+                let roll_no = [1,2,3,4,5]
+                resolve(roll_no)
+                // reject('error while communication')
+            },2000);
+
+        });
+        const getBiodata = ((indexdata) =>{
+            return new Promise( (resolve,reject)=>{
+                setTimeout((indexdata)=>{
+                    let biodata ={
+                        name:"vaibhav",
+                        age:21
+                    }
+                    resolve(`${biodata.name} ${biodata.age}`)
+                },2000,indexdata)
+            })
+        });
+
+        pobj1.then((roll_no)=>{
+            console.log(roll_no);
+            getBiodata(roll_no[1]).then((data)=>{
+                console.log(data);
+            })
+        }).catch((error)=>{
+            console.log(error);
+        })
+        const system = new Promise( (resolve,reject)=>{
+            setTimeout(()=>{
+                let sytemName = ["os","linux","ios","andoid"]
+                resolve(sytemName)
+            },2000)
+        })
+        const systemCall = ((sys)=>{
+            return new Promise ((resolve,reject)=>{
+                setTimeout((sys)=>{
+                    resolve(sys[2])
+                },2000,sys)
+            })
+        })
+        const ios = ((sys)=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout((sys)=>{
+                    sys[2] = "vaibhav"
+                    resolve(sys)
+                },2000,sys)
+            })
+        })
+
+        const androidPhones = ((sys)=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout((sys)=>{
+                    sys[0]="samsung"
+                    sys[1]="nokia"
+                    sys[2]="lg"
+                    sys[3]="realme"
+                    sys.push("vivo","moto","")
+                    resolve(sys)
+                },2000,sys)
+            })
+        })
+
+        const rej = ((sys1)=>{
+            return new Promise((resolve,reject)=>{
+            setTimeout((sys1)=>{
+                reject("error")
+            },2000,sys1)
+        })
+        })
+
+        system.then((sytemName)=>{
+            console.log(sytemName)
+            systemCall(sytemName).then((resolve)=>{
+                console.log(resolve)
+                ios(sytemName).then((resolve)=>{
+                    console.log(resolve)
+                    androidPhones(sytemName).then((resolve)=>{
+                        console.log(resolve)
+
+                    })
+                })
+            })
+        }).catch ((error)=>{
+            console.log(error)
+        })
+
+
+    </script>
+</body>
+</html>

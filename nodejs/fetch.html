@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "data"></p>
+    <script>
+        function getcoviddata(indexs){
+            fetch('https://api.covid19api.com/summary')
+        .then((data)=>{
+            console.log(data);
+            return data.json()})
+        .then((actualdata)=>{
+            console.log(actualdata)
+            return actualdata})
+        .then((actualdata1)=>{
+            const mydata = actualdata1.Countries[`${indexs}`];
+            document.getElementById('data').innerHTML=`${mydata.Country}   ${mydata.TotalConfirmed}  ${mydata.TotalRecovered}   hai`
+        }).catch((error)=>{
+            console.log(error)
+        });
+
+        }
+        for(let i = 0; i<100;i++){
+            getcoviddata(25)
+        }
+        
+    </script>
+    
+</body>
+</html>
