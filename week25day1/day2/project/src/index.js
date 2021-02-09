@@ -16,11 +16,11 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.get('/',(req,res)=>{ 
     res.end('welcome to node express')
 })
-/*
-router middleware
-router - /api/user/
-method- 
+/** 
+* @router middleware
+* @router - /api/user/
+* @method- 
 */
 
-app.use('/api/user',route);
+app.use('/api/user', route);
 app.listen(port,()=>{console.log(`http://localhost:${port}`)})

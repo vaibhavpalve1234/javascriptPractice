@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator/check');
 const bycrpt = require('bcryptjs');
-const jwt = require('jwt')
+const jwt = require('jsonwebtoken');
+const token = require('../middleware/auth')
 
 const User = require('../schemas/User');
+const auth = require('../middleware/auth');
 
 /** 
 *@method - post
@@ -126,6 +128,24 @@ router.post(
         
         }
     });    
-            
+
+/**
+ * @method - get
+ * @description -get profile of logged in user
+ * @param -user/profil
+ */
+
+ router.get('/profile',auth, async (req,res)=>{
+     try {
+         const user = await User.findById(req.user.id);
+         res.json({
+             data:user,
+             errors:[],
+             message:'fetched user profile'
+         })
+     } catch (e) {
+         res.send('error in fetching')
+     }
+ });
             
 module.export = router;
