@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require("body-parser");
-const useroutes = require('../src/routes/users')
+const route = require('../src/routes/users')
 const port = 5004;
 
-
+console.log(route)
 const InitMongo = require('../src/config/mongo-db');
 InitMongo();
 
@@ -22,5 +22,5 @@ router - /api/user/
 method- 
 */
 
-app.use('/api/user',useroutes);
+app.use('/api/user',route);
 app.listen(port,()=>{console.log(`http://localhost:${port}`)})
