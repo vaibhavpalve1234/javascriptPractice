@@ -7,21 +7,22 @@
     <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script defer src="./script.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>webchat</title>
 </head>
 <body>
-    <h1>chat</h1>
+    <h1> webchat</h1>
     <div id='loginBox'>
-        <input id="inputUsername" placeholder="userName">
-        <input id="inpPassword" placeholder="password" type="password">
+        <input id="inputUsername" placeholder="userName"><br>
+        <input id="inpPassword" placeholder="password" type="password"><br>
         <button id="btnStart"> START </button>
     </div>
 
     <div id='chatBox'>
-        <input id="inpToUser" placeholder="send to (default everyone)">
-        <input id="inpNewMsg" placeholder="new Message">
-        <button id="btnSendMsg"> SEND </button>
-        <ul id="ulMsgs"></ul>
+        <input id="inpToUser" placeholder="send to (default everyone)"><br>
+        <input id="inpNewMsg" placeholder="new Message"><br>
+        <button id="btnSendMsg"> SEND </button><br>
+        <ul id="ulMsgs"></ul><br>
     </div>
 
     <!-- <h1>hello everyone</h1>
