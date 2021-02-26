@@ -16,10 +16,6 @@ app.get('/',(req,res)=>{
     res.send('server is up and running')
 })
 
-drtsrysydsytryy
-
-
-
 app.listen(2000, () =>{
     console.log('server is running on port 2000');
 })
